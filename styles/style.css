@@ -56,7 +56,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
   grid-gap: 30px;
   min-height: 534px;
 }
@@ -66,17 +65,21 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 15px;
   padding-top: 78px;
 }
 
 .result__video-container {
   position: relative;
+  width: 711px;
+  height: 386px;
 }
 
 .result__video {
-  width: 711px;
-  height: 386px;
+  width: 100% !important;
+  height: 100%;
+
+  object-fit: cover;
 }
 
 .search-form {
@@ -87,7 +90,7 @@ ol {
 }
 .search-form h2 {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -105,17 +108,13 @@ ol {
   gap: 5px;
 
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.search-form__textfield:focus,
-.search-form__labelt:focus {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
+
 /* form  */
 
 .search-form__textfield {
@@ -128,7 +127,7 @@ ol {
   background-color: transparent;
 
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -144,32 +143,13 @@ ol {
   position: relative;
 }
 
-.content__list-item:hover {
-  text-decoration-line: underline;
-  text-decoration-color: #fff;
-}
-
-.content__list-item:focus {
-  border: 1px solid #fff;
-  margin: 0;
-}
-
-.content__list-item:active {
-  background: #545050;
-}
-
-.search-form__label:focus {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
 .search-form__label:nth-child(n) {
   cursor: pointer;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 8px;
+  gap: 15px;
 }
 
 .search-form__checkbox {
@@ -178,7 +158,7 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
-  margin: 0 5px 0 0;
+  margin: 0 0 0 0;
 }
 
 .search-form__checkbox:checked {
@@ -195,19 +175,6 @@ ol {
   left: 0;
   top: 0;
   z-index: -2;
-}
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox {
-  cursor: pointer;
-  position: absolute;
-  width: 19px;
-  height: 19px;
-  border: 1.5px solid #1b1919;
-  left: 0;
-  top: 0;
-  z-index: -2;
-  padding: 1px;
-  outline: 1px solid #fff;
-  background-color: #fff;
 }
 
 .search-form__pseudo-checkbox:checked {
@@ -229,22 +196,11 @@ ol {
 
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-.button:hover {
-  text-decoration-color: #fff;
-  text-decoration-line: underline;
-}
-.button:active {
-  background: #545050;
-}
-.button:focus {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -254,6 +210,7 @@ ol {
   justify-content: center;
   align-items: center;
 }
+
 .more-button {
   width: 100%;
 }
@@ -261,7 +218,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald";
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -282,6 +239,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   gap: 30px;
 }
@@ -292,16 +250,12 @@ ol {
 
 .content__list-item {
   margin: 1px;
-  width: 100%;
+  width: calc(100% - 2px);
 }
 .content__card-link {
   width: 100%;
   cursor: pointer;
   text-decoration: none;
-}
-.content__card-link:hover {
-  text-decoration-line: underline;
-  text-decoration-color: #fff;
 }
 
 .content__card-link_current {
@@ -310,7 +264,7 @@ ol {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -321,7 +275,7 @@ ol {
 
 .content__video-card-description {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -337,4 +291,68 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+}
+
+/*  */
+.search-form__label:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+}
+
+.search-form__textfield:focus,
+.search-form__labelt:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__list-item:active {
+  background: #545050;
+}
+
+.search-form__label:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox:checked ~ .search-form__pseudo-checkbox {
+  cursor: pointer;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid #1b1919;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  padding: 1px;
+  outline: 1px solid #fff;
+  background-color: #fff;
+}
+
+.button:hover {
+  text-decoration-color: #fff;
+  text-decoration-line: underline;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+}
+
+.content__list-item:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+}
+
+.content__list-item:focus {
+  border: 1px solid #fff;
+  margin: 0;
 }
