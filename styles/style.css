@@ -296,8 +296,9 @@ ol {
   text-decoration-color: #fff;
 }
 
-.search-form__textfield:focus,
-.search-form__labelt:focus {
+.search-form__textfield:focus-visible,
+.search-form__textfield:focus-within,
+.search-form__textfield:focus{
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -306,6 +307,8 @@ ol {
   background: #545050;
 }
 
+.search-form__label:focus-visible,
+.search-form__label:focus-within,
 .search-form__label:focus {
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -348,7 +351,8 @@ ol {
   text-decoration-line: underline;
   text-decoration-color: #fff;
 }
-
+.content__list-item:focus-visible,
+.content__list-item:focus-within,
 .content__list-item:focus {
   border: 1px solid #fff;
   margin: 0;
