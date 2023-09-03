@@ -73,7 +73,7 @@ ol {
 }
 
 .result__video {
-  width: 100% ;
+  width: 100%;
   height: 100%;
 
   object-fit: cover;
@@ -227,7 +227,7 @@ ol {
 }
 
 .content__list {
-  max-height: 295px;
+  height: 295px;
 
   margin-top: 26px;
   position: relative;
@@ -237,18 +237,18 @@ ol {
   align-items: flex-start;
   overflow-y: scroll;
   overflow-x: hidden;
-
-  gap: 30px;
 }
 
 .content__list li:last-child {
+  margin-top: 30px;
   width: 100%;
 }
 
 .content__list-item {
-  margin: 1px;
+  margin: 30px 1px 1px 1px;
   width: calc(100% - 2px);
 }
+
 .content__card-link {
   width: 100%;
   cursor: pointer;
@@ -256,7 +256,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: #545050 ;
+  background-color: #545050;
 }
 
 .content__video-card-title {
@@ -298,7 +298,8 @@ ol {
 
 .search-form__textfield:focus-visible,
 .search-form__textfield:focus-within,
-.search-form__textfield:focus{
+.search-form__textfield:focus {
+  color: rgba(255, 255, 255);
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -351,9 +352,10 @@ ol {
   text-decoration-line: underline;
   text-decoration-color: #fff;
 }
+
 .content__list-item:focus-visible,
 .content__list-item:focus-within,
 .content__list-item:focus {
   border: 1px solid #fff;
-  margin: 0;
+  margin: 30px 0 0 0;
 }
